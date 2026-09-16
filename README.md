@@ -1,3 +1,6 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+
 ===============================================================================
 PROJECT: Feigenbaum Constant Computation Engine
 ===============================================================================
@@ -11,3 +14,9 @@ ALGORITHM & MATHEMATICS:
 - Period-Doubling Ratio Limit:
     delta = lim_{k -> infinity} (r_k - r_{k-1}) / (r_{k+1} - r_k)
 - Evaluates period-doubling bifurcation roots for quadratic maps using mpmath + gmpy2.
+
+## Usage
+
+```bash
+python "Feigenbaum Constant.py" --help
+```
