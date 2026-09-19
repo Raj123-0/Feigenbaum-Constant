@@ -1,22 +1,51 @@
+# Feigenbaum Constant
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![CI](https://github.com/Raj123-0/Feigenbaum-Constant/actions/workflows/ci.yml/badge.svg)](https://github.com/Raj123-0/Feigenbaum-Constant/actions)
 
-===============================================================================
-PROJECT: Feigenbaum Constant Computation Engine
-===============================================================================
 
-OVERVIEW:
-Calculates the Feigenbaum constant delta (delta ≈ 4.66920160910299067185...) to 
-arbitrary precision (N digits). Delta is a fundamental universal constant governing 
-chaos theory across fluid turbulence, electronic circuits, and population dynamics.
+High-precision mathematical computation and OEIS digit generator for Feigenbaum Constant.
 
-ALGORITHM & MATHEMATICS:
-- Period-Doubling Ratio Limit:
-    delta = lim_{k -> infinity} (r_k - r_{k-1}) / (r_{k+1} - r_k)
-- Evaluates period-doubling bifurcation roots for quadratic maps using mpmath + gmpy2.
+## Overview
+
+`Feigenbaum-Constant` implements high-precision evaluation of the **Feigenbaum Constant** using arbitrary-precision mathematical routines (`mpmath` and C-accelerated `gmpy2`). The engine generates exact decimal digits, formats standard OEIS b-file sequences, and includes an automated performance benchmark.
+
+## Features
+
+- **Arbitrary-Precision Calculation**: Configurable digit targets with optimized guard precision.
+- **OEIS b-file Output**: Generates 1-based index sequence files ready for OEIS submission.
+- **Performance Profiling**: Built-in benchmark suite to evaluate digits/sec scaling.
+- **Robust CLI**: Easy command-line interface with argument parsing.
+
+## Installation
+
+```bash
+git clone https://github.com/Raj123-0/Feigenbaum-Constant.git
+cd Feigenbaum-Constant
+pip install -r requirements.txt
+```
 
 ## Usage
 
+Calculate digits with the CLI:
+
 ```bash
-python "Feigenbaum Constant.py" --help
+python "Feigenbaum Constant.py" --digits 1000
 ```
+
+Run precision benchmarks:
+
+```bash
+python benchmarks/bench_precision.py
+```
+
+Run automated tests:
+
+```bash
+pytest tests/
+```
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
